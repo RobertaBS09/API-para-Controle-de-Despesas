@@ -17,14 +17,14 @@ public record DadosCadastroDespesa(
 
         @NotNull
         @Positive
-        double valor,
+        Double valor,
 
         @NotNull
         @Pattern(regexp = "^(primeiroDiaUtil|quintoDiaUtil|ultimoDiaUtil)$")
         String diaFixo,
 
         @NotNull
-        boolean pago,
+        Boolean pago,
 
         @NotNull
         Categoria categoria

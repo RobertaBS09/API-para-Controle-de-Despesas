@@ -9,5 +9,6 @@ public enum Categoria {
     SAUDE,
     LAZER,
     CELULAR,
+    VIAJEM,
     OUTROS;
 }
