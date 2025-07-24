@@ -82,7 +82,7 @@ http://localhost:8080
 
 Projeto desenvolvido por **Roberta Barbosa da Silva** durante seus estudos em Spring Boot e back-end Java.
 
-📎 [Meu LinkedIn](www.linkedin.com/in/roberta-barbosa-da-silva-)
+📎 [Meu LinkedIn](https://www.linkedin.com/in/roberta-barbosa-da-silva-/)
 
 ---
 
