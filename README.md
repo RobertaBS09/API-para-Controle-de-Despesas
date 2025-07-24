@@ -1,44 +1,91 @@
-# API-para-Controle-de-Despesas
-API REST para controle de despesas pessoais, desenvolvida com Spring Boot e MySQL. Permite cadastrar, consultar, atualizar e excluir despesas, gerenciando informações como categoria, valor e forma de pagamento.
-# 💰 Controlador de Despesas Pessoais API
+# 💸 API para Controle de Despesas
 
-API RESTful para gestão eficiente de despesas pessoais, desenvolvida com Spring Boot.
+Este é um projeto pessoal criado com o objetivo de praticar o desenvolvimento de APIs REST utilizando **Java** e **Spring Boot**. A aplicação simula um sistema de controle de despesas, permitindo o cadastro, consulta, atualização e exclusão de registros financeiros.
+
+> ⚠️ Os dados utilizados são **fictícios**, com o único propósito de testar e demonstrar as funcionalidades da aplicação.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- Java 17
+- Spring Boot
+- Spring Data JPA
+- MySQL
+- Maven
+- Postman/Insomnia (para testes de requisições)
 
 ---
 
-## 📝 Descrição do Projeto
+## 📦 Funcionalidades
 
-Este projeto consiste em uma API RESTful para o controle de despesas pessoais, desenvolvida como um exercício prático e parte do meu portfólio de desenvolvimento. A aplicação permite realizar operações CRUD (Criar, Ler, Atualizar, Deletar) sobre registros de despesas, gerenciando informações detalhadas como:
-
-* **Nome e Descrição:** Para identificar e detalhar cada gasto.
-* **Valor:** Montante da despesa.
-* **Forma de Pagamento:** Enumeração para tipos de pagamento (e.g., BOLETO, CRÉDITO, PIX, DINHEIRO).
-* **Dia Fixo:** Campo para indicar datas de vencimento ou recorrência (e.g., "quintoDiaUtil").
-* **Categoria:** Classificação da despesa (e.g., EDUCAÇÃO, ALIMENTAÇÃO).
-* **Status de Pagamento:** Indicação se a despesa já foi paga.
-
-O objetivo principal deste projeto é demonstrar minhas habilidades em desenvolvimento backend, utilizando as melhores práticas e ferramentas do ecossistema Spring Boot.
-
-## 🛠 Tecnologias Utilizadas
-
-As principais tecnologias e ferramentas empregadas neste projeto incluem:
-
-* **Java 21:** Linguagem de programação moderna.
-* **Spring Boot 3.4.x:** Framework robusto para construção de APIs REST.
-* **Spring Data JPA:** Simplifica a camada de persistência de dados.
-* **Hibernate:** Implementação de ORM para mapeamento objeto-relacional.
-* **MySQL:** Sistema de Gerenciamento de Banco de Dados Relacional.
-* **Flyway:** Ferramenta para controle de versão e migração do esquema do banco de dados.
-* **Maven:** Gerenciamento de dependências e build.
-* **Lombok:** Para reduzir código boilerplate em entidades.
-* **Validação (Jakarta Bean Validation):** Para garantir a integridade dos dados de entrada.
-
-## 🚀 Estrutura e Funcionalidades Chave
-
-* **Entidades JPA:** Mapeamento de objetos Java (`Despesa`) para tabelas no banco de dados.
-* **Spring Data Repositories:** Interfaces para operações de acesso a dados prontas para uso.
-* **Controladores REST:** Endpoints para interação com a API (`POST`, `GET`, `PUT`, `DELETE`).
-* **Validação de Dados:** Utilização de anotações para validar a entrada de dados.
-* **Migrações de Banco de Dados:** Gerenciamento do esquema do banco de dados via Flyway.
+- [x] Cadastro de despesas
+- [x] Consulta de todas as despesas
+- [x] Atualização de despesas existentes
+- [x] Desativação de despesas
+- [x] Ativação de Despesas
 
 ---
+
+## ⚙️ Como Rodar o Projeto Localmente
+
+### Pré-requisitos
+
+- Java 17+
+- MySQL instalado e rodando
+- Maven
+- IDE (recomendada: IntelliJ IDEA)
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/RobertaBS09/API-para-Controle-de-Despesas.git
+cd API-para-Controle-de-Despesas
+```
+
+### 2. Configure o banco de dados
+
+Crie um banco de dados MySQL com o nome `despesas`.
+
+Crie um arquivo `application.properties` dentro de `src/main/resources/` com as suas credenciais locais. ⚠️ **Não inclua esse arquivo no Git!**
+
+Ou copie o modelo abaixo para `application.properties`:
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/despesas
+spring.datasource.username=seu_usuario
+spring.datasource.password=sua_senha
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+```
+
+> Exemplo genérico disponível em `application-example.properties`.
+
+### 3. Execute o projeto
+
+Via terminal:
+
+```bash
+./mvnw spring-boot:run
+```
+
+A API ficará disponível em:
+
+```
+http://localhost:8080
+```
+
+
+## 👩‍💻 Sobre
+
+Projeto desenvolvido por **Roberta Barbosa da Silva** durante seus estudos em Spring Boot e back-end Java.
+
+📎 [Meu LinkedIn](www.linkedin.com/in/roberta-barbosa-da-silva-)
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a licença MIT.
